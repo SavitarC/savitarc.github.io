@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://savitarc.github.io</id>
-    <title>Gridea</title>
-    <updated>2020-09-21T16:28:02.898Z</updated>
+    <title>SavitarC的小破站</title>
+    <updated>2020-09-21T16:39:37.060Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://savitarc.github.io"/>
     <link rel="self" href="https://savitarc.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
+    <subtitle>2020.9.22凌晨诞生</subtitle>
     <logo>https://savitarc.github.io/images/avatar.png</logo>
     <icon>https://savitarc.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, Gridea</rights>
+    <rights>All rights reserved 2020, SavitarC的小破站</rights>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://savitarc.github.io/post/hello-gridea/</id>
