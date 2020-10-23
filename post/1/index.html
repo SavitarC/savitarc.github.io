@@ -1,0 +1,252 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>出于强大的涩图机制而不得不转移至此的md | SavitarC的小破站</title>
+<link rel="shortcut icon" href="https://savitarc.github.io/favicon.ico?v=1603447814062">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://savitarc.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="出于强大的涩图机制而不得不转移至此的md | SavitarC的小破站 - Atom Feed" href="https://savitarc.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="1.安装配置 WSL2 的 Ubuntu 发行版
+这一项任务我的计算思维导论老师正好发了一份教程
+
+于是我按照教程进行了安装和配置，很快便配置成功
+
+但是当我尝试配置免密连接时却遇到了问题
+
+尝试开启SSH服务时总是报错
+网上找了很多教程尝..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://savitarc.github.io">
+  <img class="avatar" src="https://savitarc.github.io/images/avatar.png?v=1603447814062" alt="">
+  </a>
+  <h1 class="site-title">
+    SavitarC的小破站
+  </h1>
+  <p class="site-description">
+    2020.9.22凌晨诞生
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+        <a href="https://github.com/SavitarC" target="_blank">
+          <i class="ri-github-line"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              出于强大的涩图机制而不得不转移至此的md
+            </h2>
+            <div class="post-info">
+              <span>
+                2020-10-22
+              </span>
+              <span>
+                2 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <h4 id="1安装配置-wsl2-的-ubuntu-发行版">1.安装配置 WSL2 的 Ubuntu 发行版</h4>
+<p>这一项任务我的计算思维导论老师正好发了一份教程</p>
+<figure data-type="image" tabindex="1"><img src="https://savitarc.github.io/post-images/1603438889873.png" alt="" loading="lazy"></figure>
+<p>于是我按照教程进行了安装和配置，很快便配置成功<br>
+<img src="https://savitarc.github.io/post-images/1603439283367.png" alt="" loading="lazy"></p>
+<p>但是当我尝试配置免密连接时却遇到了问题<br>
+<img src="https://savitarc.github.io/post-images/1603439338623.png" alt="" loading="lazy"></p>
+<p>尝试开启SSH服务时总是报错</p>
+<p>网上找了很多教程尝试解决但始终没有成果，无奈只能去询问学姐</p>
+<figure data-type="image" tabindex="2"><img src="https://savitarc.github.io/post-images/1603439078327.png" alt="" loading="lazy"></figure>
+<p>用这个指令后虽然创建了hostkeys，但是仍然报错。最后采用了卸载重装大法解决（?）</p>
+<figure data-type="image" tabindex="3"><img src="https://savitarc.github.io/post-images/1603439088014.png" alt="" loading="lazy"></figure>
+<p>本以为开启SSH服务后便是一帆风顺，按照教程设置rsa_key巴拉巴拉 ，但是总是无法达成免密操作</p>
+<p>于是又开始了漫长的搜索....搜索中发现，大部分教程使用的都是虚拟机，遂决定转向使用虚拟机来尝试完成任务</p>
+<h4 id="2在虚拟机软件中安装配置-ubuntu-发行版">2.在虚拟机软件中安装配置 Ubuntu 发行版</h4>
+<p>安装以及连接都是很简单的任务，很快就能完成</p>
+<figure data-type="image" tabindex="4"><img src="https://savitarc.github.io/post-images/1603439114253.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="5"><img src="https://savitarc.github.io/post-images/1603439117577.png" alt="" loading="lazy"></figure>
+<p>然而，在设置SSH免密这一步又碰到了一模一样的问题</p>
+<figure data-type="image" tabindex="6"><img src="https://savitarc.github.io/post-images/1603439124126.png" alt="" loading="lazy"></figure>
+<p>按照教程我已经将rsa.pub转移到了authorized_keys文件里面，更改了文件权限，修改了sshd_config文件，按理来说应该可以完成免密操作了，但是每次登陆仍然需要密码。</p>
+<p>于是我决定反向操作一次，原来是在windows上生成key转移到ubuntu上，这次在ubuntu上生成key转移到windows上。</p>
+<figure data-type="image" tabindex="7"><img src="https://savitarc.github.io/post-images/1603439128862.png" alt="" loading="lazy"></figure>
+<p>似乎确实是成功不需要输入密码了，但是新的问题又出现了，这个无论输入什么都显示permission denied，最后发现是用户名的大小写问题导致的授权出错。</p>
+<p>然而.....仍然是需要输入密码的状态.....</p>
+<figure data-type="image" tabindex="8"><img src="https://savitarc.github.io/post-images/1603439397242.jpg" alt="" loading="lazy"></figure>
+<p>出于时间的关系....只能无奈把这个问题遗留下来了...</p>
+<h5 id="shell小程序">Shell小程序</h5>
+<p>emmmm题目说开发简易的小程序....这个最简单的算么</p>
+<figure data-type="image" tabindex="9"><img src="https://savitarc.github.io/post-images/1603439158690.png" alt="" loading="lazy"></figure>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#1%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE-wsl2-%E7%9A%84-ubuntu-%E5%8F%91%E8%A1%8C%E7%89%88">1.安装配置 WSL2 的 Ubuntu 发行版</a></li>
+<li><a href="#2%E5%9C%A8%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%BD%AF%E4%BB%B6%E4%B8%AD%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE-ubuntu-%E5%8F%91%E8%A1%8C%E7%89%88">2.在虚拟机软件中安装配置 Ubuntu 发行版</a>
+<ul>
+<li><a href="#shell%E5%B0%8F%E7%A8%8B%E5%BA%8F">Shell小程序</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://savitarc.github.io/post/hello/">
+              <h3 class="post-title">
+                Hello
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '5eb767226c0bfd43e32b',
+    clientSecret: '2c399b9ee2faace0a1a6837f70cf84929e064fbc',
+    repo: 'savitarc.github.io',
+    owner: 'SavitarC',
+    admin: ['SavitarC'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://savitarc.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
